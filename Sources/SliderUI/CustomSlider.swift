@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct CustomSlider<S: Shape>: View {
+public struct CustomSlider<S: Shape>: View {
     // MARK: - Properties
     @Binding private var sliderProgress: CGFloat
     private let config: SliderConfiguration
@@ -19,10 +19,10 @@ struct CustomSlider<S: Shape>: View {
     @State private var isDragging = false
     
     // MARK: - Initialization
-    init(sliderProgress: Binding<CGFloat>,
-         configuration: SliderConfiguration = .init(),
-         constants: SliderConstants = .init(),
-         clipShape: S = .capsule) {
+    public init(sliderProgress: Binding<CGFloat>,
+                configuration: SliderConfiguration = .init(),
+                constants: SliderConstants = .init(),
+                clipShape: S = .capsule) {
         self._sliderProgress = sliderProgress
         self.progress = sliderProgress.wrappedValue
         self.config = configuration
@@ -30,7 +30,7 @@ struct CustomSlider<S: Shape>: View {
         self.clipShape = clipShape
     }
     
-    var body: some View {
+    public var body: some View {
         GeometryReader { proxy in
             let size = proxy.size
             let orientationSize = config.axis == .horizontal ? size.width : size.height

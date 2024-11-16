@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct SliderConfiguration {
+public struct SliderConfiguration {
     let symbol: String?
     let symbolColor: Color
     let axis: SliderAxis
@@ -14,12 +14,12 @@ struct SliderConfiguration {
     let alwaysVisible: Bool
     let type: SliderType
     
-    init(symbol: String? = nil,
-         symbolColor: Color = .gray,
-         axis: SliderAxis = .horizontal,
-         tint: Color = .white,
-         alwaysVisible: Bool = false,
-         type: SliderType = .basic) {
+    public init(symbol: String? = nil,
+                symbolColor: Color = .gray,
+                axis: SliderAxis = .horizontal,
+                tint: Color = .white,
+                alwaysVisible: Bool = false,
+                type: SliderType = .basic) {
         self.symbol = symbol
         self.symbolColor = symbolColor
         self.axis = axis

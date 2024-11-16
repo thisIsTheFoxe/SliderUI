@@ -7,12 +7,12 @@
 
 
 // MARK: - Types
-enum SliderAxis {
+public enum SliderAxis {
     case vertical
     case horizontal
 }
 
-enum SliderType {
+public enum SliderType {
     case basic
     case centered
 }
